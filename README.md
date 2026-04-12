@@ -1,64 +1,55 @@
-**MMORPG Database Platform**
+# Aethoria Chronicles Database Platform
+
+Plataforma web de base de datos para el videojuego MMORPG ficticio 
+Aethoria Chronicles. Proyecto Intermodular de 1º DAW.
 
 
+## ¿Qué es este proyecto?
 
-\## ¿Qué es este proyecto?
-
-Plataforma web genérica de base de datos para videojuegos MMORPG. 
-
-Permite a los desarrolladores de cada juego publicar y mantener 
-
-actualizada la información del juego: items, clases, habilidades, 
-
-personajes y mecánicas.
+Plataforma web que centraliza y organiza toda la información relevante 
+del juego: clases, roles, habilidades e items. Incluye una interfaz web 
+pública para consulta y una aplicación Java para la gestión del contenido.
 
 
+## Tecnologías utilizadas
 
-**¿Qué problema resuelve?**
-
-Los jugadores de MMORPGs necesitan consultar información detallada 
-
-del juego en un solo lugar. Esta plataforma centraliza esa información 
-
-y permite que se actualice automáticamente cuando los desarrolladores 
-
-suben nueva documentación.
+- HTML5 + CSS3
+- Java + JDBC
+- MySQL (Docker)
+- Maven
+- GitHub
 
 
+## Estructura del repositorio
 
-**¿A quién va dirigida?**
-
-\- Jugadores que quieren consultar información del juego
-
-\- Desarrolladores que quieren gestionar el contenido
-
-\- Comunidades de cada MMORPG
-
-
-
-**Tecnologías utilizadas**
-
-\- HTML + CSS (interfaz web)
-
-\- Java + JDBC (gestión de datos)
-
-\- MySQL (base de datos)
+mmorpg-database-platform/
+├── /web        → Interfaz web HTML+CSS
+├── /src        → Aplicación Java con Maven
+├── /sql        → Scripts de base de datos
+└── /docs       → Documentación del proyecto
+├── /sistemas       → Informe técnico
+└── /empleabilidad  → Perfil profesional y portfolio
 
 
+## Cómo ejecutar el proyecto
 
-**Estructura del repositorio**
+**1. Levantar la base de datos con Docker**
 
-\- /web → Interfaz web de la plataforma
+docker run --name mysql-aethoria -e MYSQL_ROOT_PASSWORD=aethoria123 -e MYSQL_DATABASE=aethoria_db -p 3307:3306 -d mysql:8.0
 
-\- /src → Aplicación Java
+**2. Ejecutar los scripts SQL**
+Conectarse con TablePlus y ejecutar en orden:
+1. `sql/crear_tablas.sql`
+2. `sql/insertar_datos.sql`
 
-\- /sql → Scripts de base de datos
+**3. Ejecutar la aplicación Java**
+Abrir el proyecto `src/aethoria-app` en IntelliJ IDEA y ejecutar `App.java`
 
-\- /docs → Documentación técnica
+**4. Abrir la web**
+Abrir `web/index.html` en el navegador
 
 
+## Autor
 
-**Estado del proyecto**
-
-En desarrollo — Proyecto Intermodular 1º DAW
-
+Adrián Navarro Urbistondo — 1º DAW
+Prometeo by The Power — 2025

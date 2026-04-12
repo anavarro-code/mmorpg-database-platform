@@ -12,7 +12,7 @@ mismo proyecto me ha quedado claro que forman parte de un proceso
 completo: la base de datos almacena la información, Java la gestiona 
 y la web la presenta al usuario.
 
-También he aprendido a usar herramientas que he utilziado demasiado, como 
+También he aprendido a usar herramientas que no he utilziado demasiado, como 
 Docker para gestionar entornos de base de datos, TablePlus para 
 visualizar los datos, o Maven para gestionar las dependencias de Java.
 
